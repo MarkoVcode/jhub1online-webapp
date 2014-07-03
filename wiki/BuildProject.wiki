@@ -7,36 +7,38 @@
 
 = Introduction =
 
-There are number of essential tools that are needed to start developing the project.
+There are three essential tools that are needed to start developing the project.
 Platform independent ones:
   # [https://www.dartlang.org/ Dart IDE]
   # [http://www.soapui.org/ SoapUI]
-And [http://subversion.apache.org/ Subversion] client which can be different depending on the platform.
+And [http://subversion.apache.org/ Subversion] client which can be different depending on the platform and personal preferences.
 Windows users might go for [http://tortoisesvn.net/ TortoiseSVN] when the Linux lovers would rather prefer raw command line interface.
 
 The screen grabs are from early stage of the project. The real views might differ.
+
+*PLEASE NOTE:* _The following setup is using two ports: 8080 for local web server and 8081 for mocking REST services. Make sure the ports are not used by other software or change the configuration accordingly_
 
 = Checking out the project =
 
 ==Linux==
 To install [http://subversion.apache.org/ Subversion] follow the way most suitable for your linux distro.
 For Ubuntu you need to:
-
+{{{
 sudo apt-get install subversion
-
+}}}
 Create folder that will contain all the project's elements:
-
+{{{
 mkdir JHUB1OnlineProject
 cd JHUB1OnlineProject
-
+}}}
 Check out the source files:
-
+{{{
 svn co https://jhub1online-webapp.googlecode.com/svn/trunk/webapp JHUB1OnlineWebApp
 svn co https://jhub1online-webservice.googlecode.com/svn/trunk/webend/mock rest-mock
-
+}}}
 ==Windows==
 
-TBP
+To be updated.
 
 = Configuring REST mocking service =
 
@@ -48,6 +50,7 @@ https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev02.png
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev03.png
   * (Step 4) Find MockAPIOperations and in the context menu pick Start Minimized
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev04.png
+At this point the RESTful web service is waiting for the calls from the DART app.
 
 = Running project in DART IDE =
 
