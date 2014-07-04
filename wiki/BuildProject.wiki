@@ -52,8 +52,8 @@ https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev01.png
   * (Step 3) Now the workspace is loaded, can be browsed
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev03.png
   * (Step 4) Find MockAPIOperations and in the context menu pick Start Minimized
-https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev04.png
 At this point the RESTful web service is waiting for the calls from the DART app.
+https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev04.png
 
 = Running project in DART IDE =
 
