@@ -34,7 +34,6 @@ cd JHUB1OnlineProject
 Check out the source files:
 {{{
 svn co https://jhub1online-webapp.googlecode.com/svn/trunk/webapp JHUB1OnlineWebApp
-svn co https://jhub1online-webservice.googlecode.com/svn/trunk/webend/mock rest-mock
 }}}
 ==Windows==
 
@@ -42,10 +41,13 @@ To be updated.
 
 = Configuring REST mocking service =
 
-  * (Step 1) Open SoapUI and for File -> Switch Workspace
+  * (Step 1) Open SoapUI; File -> Import Remote Project
+https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev00.png
+  * (Step 2) Provide following URL:
+{{{
+https://jhub1online-webservice.googlecode.com/svn/trunk/webend/mock/REST-Project-1-soapui-project.xml
+}}}
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev01.png
-  * (Step 2) Find rest-mock/JHUB1Online-workspace.xml file
-https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev02.png
   * (Step 3) Now the workspace is loaded, can be browsed
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev03.png
   * (Step 4) Find MockAPIOperations and in the context menu pick Start Minimized
@@ -68,6 +70,9 @@ https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev14.png
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev15.png
   * (Step 7) It should be jhub1onlinerestexample.html and now you can press Run on the window from step 6
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev16.png
+  * (Step 8) The browser should open with the following page:
+*PLEASE NOTE:* _It might take a few seconds to start operating at the first time_
+https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev17.png
 
 
 
