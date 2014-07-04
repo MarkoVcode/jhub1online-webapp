@@ -12,6 +12,7 @@ Platform independent ones:
   # [https://www.dartlang.org/ Dart IDE]
   # [http://www.soapui.org/ SoapUI]
 And [http://subversion.apache.org/ Subversion] client which can be different depending on the platform and personal preferences.
+
 Windows users might go for [http://tortoisesvn.net/ TortoiseSVN] when the Linux lovers would rather prefer raw command line interface.
 
 The screen grabs are from early stage of the project. The real views might differ.
@@ -71,6 +72,7 @@ https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev15.png
   * (Step 7) It should be jhub1onlinerestexample.html and now you can press Run on the window from step 6
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev16.png
   * (Step 8) The browser should open with the following page:
+
 *PLEASE NOTE:* _It might take a few seconds to start operating at the first time_
 
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev17.png
