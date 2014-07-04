@@ -72,6 +72,7 @@ https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev15.png
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev16.png
   * (Step 8) The browser should open with the following page:
 *PLEASE NOTE:* _It might take a few seconds to start operating at the first time_
+
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev17.png
 
 
