@@ -1,14 +1,12 @@
 import 'dart:html';
 
 void main() {
-//  loadData();
-  var ajax = new Jhub1Ajax();
-  ajax.getAgent("QWERTY");
+  var ajax = new Jhub1AjaxWorks();
+  ajax.getWorks();
   
   querySelector("#sample_text_id")
-      ..text = "Click me!"
+      ..text = "It Doesn't Work"
       ..onClick.listen(reverseText);
- // querySelector("#sample_text_id").text = "wewewewewew";
 }
 
 void reverseText(MouseEvent event) {
@@ -20,40 +18,33 @@ void reverseText(MouseEvent event) {
   querySelector("#sample_text_id").text = buffer.toString();
 }
 
-void loadData() {
-  var url = "http://127.0.0.1:8081/mock0/agent/QWERTY";
 
-  // call the web server asynchronously
-//  var request = HttpRequest.getString(url).then(onDataLoaded);
-}
-
-
-
-class Jhub1Ajax {
+class Jhub1AjaxWorks {
   
-  static const String URL = "http://127.0.0.1:8081";
+  static const String URL = "http://127.0.0.1";
+  static const String PORT = "8081";
   static const String VERSION = "mock0";
-  
-  static const String AGENT = "agent";
+  static const String TEST = "works";
 
-  void getAgent(String agentID) {
+  String buildURI() {
     var buffer = new StringBuffer();
     buffer.write(URL);
+    buffer.write(":");
+    buffer.write(PORT);
     buffer.write("/");
     buffer.write(VERSION);
     buffer.write("/");
-    buffer.write(AGENT);
-    buffer.write("/");
-    buffer.write(agentID);
-    var request = HttpRequest.getString(buffer.toString()).then(this.onDataLoaded);
+    buffer.write(TEST);
+    return buffer.toString();
+  }
+  
+  void getWorks() {
+    var request = HttpRequest.getString(buildURI()).then(this.onDataLoaded);
   }
   
   void onDataLoaded(String responseText) {
     var jsonString = responseText;
-   // 
-   // print(jsonString);
     querySelector("#sample_text_id").text = jsonString;
-//  querySelector("#sample_text_id").text = "wewewewewew";
   }
   
 }
