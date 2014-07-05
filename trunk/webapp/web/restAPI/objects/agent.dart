@@ -1,8 +1,10 @@
 library agent;
 import 'dart:convert';
+import 'response.dart';
+import 'link.dart';
 
-class Agent {
-  
+class Agent extends Response {
+ 
   String id;
   DateTime created;
   String status;
@@ -14,9 +16,18 @@ class Agent {
   int sorder;
   String buildid;
   DateTime builddate;
+  Link link;
 
-  Agent(String agentJsonString) {
-    Map parsedMap = JSON.decode(agentJsonString);
+  Agent.fromJSON(String json) {
+    Map parsedMap = JSON.decode(json);
+    getFromMap(parsedMap);
+  }
+
+  Agent.fromMap(Map parsedMap) {
+    getFromMap(parsedMap);
+  }
+  
+  void getFromMap(Map parsedMap) {
     id = parsedMap["id"];
     status = parsedMap["status"];
     name = parsedMap["name"];
@@ -24,8 +35,13 @@ class Agent {
     color = parsedMap["color"];
     description = parsedMap["description"];
     buildid = parsedMap["buildid"];
+    link = new Link.fromMap(parsedMap["link"]);
   }
-
+  
+  Agent.error() {
+    
+  }
+  
   String getID() {
     return id;
   }
@@ -52,23 +68,8 @@ class Agent {
   String getBuildId() {
     return buildid;
   }
-}
-
-class Agents {
-  List agents; 
-  int total = 100;
-  String something;
   
-  int getTotal() {
-    return total;
-  }
-  String getRubbish() {
-    return "RUBBISH";
-  }
-  String getSomething() {
-    return something;
-  }
-  void setSomething(String value) {
-    something = value;
+  Link getLink() {
+    return link;
   }
 }
