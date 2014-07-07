@@ -39,9 +39,12 @@ svn co https://jhub1online-webapp.googlecode.com/svn/trunk/webapp JHUB1OnlineWeb
 
 ==Windows==
  * Create a folder on your {{{C:\}}} drive or where it is convenient for you. 
-Example: {{{C:\SVN}}}.
-* Open the folder and right click within  the empty folder
-* Select {{{SVN Checkout...}}} from the 
+ Example: 
+{{{
+C:\SVN
+}}}.
+ * Open the folder and right click within  the empty folder
+ * Select {{{SVN Checkout...}}} from the 
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/Win-svn_checkout-1.png
 
 * Type in /or copy and paste the repository URL. (Tip: Ctrl+C repository URL before this step. The URL will be shown in _URL of repository_ input)
@@ -93,4 +96,3 @@ https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev16.png
 *PLEASE NOTE:* _It might take a few seconds to start operating at the first time_
 
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/linuxWebAppDev17.png
-
