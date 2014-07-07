@@ -36,9 +36,25 @@ Check out the source files:
 {{{
 svn co https://jhub1online-webapp.googlecode.com/svn/trunk/webapp JHUB1OnlineWebApp
 }}}
-==Windows==
 
-To be updated.
+==Windows==
+* Create a folder on your {{{C:\}}} drive or where it is convenient for you. 
+Example: {{{C:\SVN}}}.
+* Open the folder and right click within  the empty folder
+* Select {{{SVN Checkout...}}} from the 
+https://jhub1online-webapp.googlecode.com/svn/wiki/assets/Win-svn_checkout-1.png
+
+* Type in /or copy and paste the repository URL. (Tip: Ctrl+C repository URL before this step. The URL will be shown in _URL of repository_ input)
+* Navigate to your checkout directory. In this example {{{C:\SVN}}}
+* Click _OK_
+https://jhub1online-webapp.googlecode.com/svn/wiki/assets/Win-svn_checkout-2.png
+
+* Following these steps should lead to _Checkout Finish_.
+https://jhub1online-webapp.googlecode.com/svn/wiki/assets/Win-svn-repo_cretead-1.png
+
+* Check the files within the checkout folder - {{{C:\SVN}}}. They should have _green_ checkout icons displayed. 
+https://jhub1online-webapp.googlecode.com/svn/wiki/assets/Win-svn-repo_cretead-1.png
+
 
 = Configuring REST mocking service =
 
