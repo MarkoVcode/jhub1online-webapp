@@ -43,16 +43,20 @@ svn co https://jhub1online-webapp.googlecode.com/svn/trunk/webapp JHUB1OnlineWeb
  * Select *SVN Checkout...* from the 
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/Win-svn_checkout-1.png
 
- * Type in /or copy and paste the repository URL. _(Tip: Ctrl+C repository URL before this step. The URL will be shown in _URL of repository_ input)_
+
+ * Type in /or copy and paste the repository URL. _(Tip: Ctrl+C repository URL before this step. The URL will be shown in *URL of repository* input)_
  * Navigate to your checkout directory. In this example *C:\SVN*
  * Click _OK_
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/Win-svn_checkout-2.png
 
- * Following these steps should lead to _Checkout Finish_.
+
+ * Following these steps should lead to _Checkout Finished_.
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/Win-svn-repo_cretead-1.png
 
- * Check the files within the checkout folder - *C:\SVN*. They should have _green_ checkout icons displayed. 
-https://jhub1online-webapp.googlecode.com/svn/wiki/assets/Win-svn-repo_cretead-1.png
+
+ * Check the files within the checkout folder - *C:\SVN*. They should have *_green_ checkout icons* displayed. 
+https://jhub1online-webapp.googlecode.com/svn/wiki/assets/Win-svn-repo_cretead-2.png
+
 
 
 = Configuring REST mocking service =
