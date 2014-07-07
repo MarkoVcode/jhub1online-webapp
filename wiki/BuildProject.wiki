@@ -46,6 +46,9 @@ https://jhub1online-webapp.googlecode.com/svn/wiki/assets/Win-svn_checkout-1.png
 <br>
 
  * Type in /or copy and paste the repository URL. _(Tip: Ctrl+C repository URL before this step. The URL will be shown in *URL of repository* input)_
+{{{
+  https://jhub1online-webapp.googlecode.com/svn/trunk/webapp
+}}}
  * Navigate to your checkout directory. In this example *C:\SVN*
  * Click _OK_
 https://jhub1online-webapp.googlecode.com/svn/wiki/assets/Win-svn_checkout-2.png
