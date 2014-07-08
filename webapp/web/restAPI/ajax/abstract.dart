@@ -1,4 +1,4 @@
-abstract class Jhub1Service {
+abstract class Service {
 
   static const String URL = "http://127.0.0.1";
   static const String PORT = "8081";

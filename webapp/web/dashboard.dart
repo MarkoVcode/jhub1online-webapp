@@ -1,14 +1,14 @@
 import 'dart:html';
-import 'restAPI/ajax/agents.dart';
+import 'restAPI/ajax/services.dart';
 import 'restAPI/objects/agent.dart';
 import 'restAPI/objects/agents.dart';
 
 
 void main() {
-  var ajax = new ServiceAgents();
-  ajax.getByID(doShitWithMyAgent, "A-1E6B9-5P8TQ-HJ9JKDL0Y.733");
-  ajax.get(doShitWithMyAgents);
-  
+  var ajax = new JHUB1Services();
+  ajax.getAgentByID(doShitWithMyAgent, "A-1E6B9-5P8TQ-HJ9JKDL0Y.733");
+  ajax.getAgents(doShitWithMyAgents);
+
   querySelector("#sample_text_id")
       ..text = "Click me!"
       ..onClick.listen(reverseText);
