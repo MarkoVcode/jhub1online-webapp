@@ -2,6 +2,7 @@ library link;
 
 class Link {
   String href;
+  String rel;
   
   Link.fromMap(Map map) {
     href = map["href"];
@@ -9,5 +10,9 @@ class Link {
   
   String getHref() {
     return href;
+  }
+  
+  String getRel() {
+    return rel;
   }
 }

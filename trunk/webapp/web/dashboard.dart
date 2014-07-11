@@ -2,16 +2,37 @@ import 'dart:html';
 import 'restAPI/ajax/services.dart';
 import 'restAPI/objects/agent.dart';
 import 'restAPI/objects/agents.dart';
-
+import "package:restful/restful.dart";
 
 void main() {
-  var ajax = new JHUB1Services();
-  ajax.getAgentByID(doShitWithMyAgent, "A-1E6B9-5P8TQ-HJ9JKDL0Y.733");
+  
+ var api = new RestApi(apiUri: "http://127.0.0.1:8081/mock0", format: new JsonFormat());
+  var usersApi = api.resource("agents");
+  usersApi.findAll();
+  
+  usersApi.findAll().then(usersJson);
+  
+  usersApi.find("A-1E6B9-5P8TQ-HJ9JKDL0Y.733").then(usersJson2);
+  
+ var ajax = new JHUB1Services();
+ //ajax.getAgentByID(doShitWithMyAgent, "A-1E6B9-5P8TQ-HJ9JKDL0Y.733");
   ajax.getAgents(doShitWithMyAgents);
-
+ // print(usersJson);
   querySelector("#sample_text_id")
       ..text = "Click me!"
       ..onClick.listen(reverseText);
+}
+
+void usersJson(Map parsedMap) {
+  print("CRAP");
+  String total = parsedMap["total"];
+  print(total);
+}
+
+void usersJson2(Map parsedMap) {
+  print("CRAP2");
+  String total = parsedMap["id"];
+  print(total);
 }
 
 void reverseText(MouseEvent event) {
