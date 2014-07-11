@@ -1,16 +1,15 @@
-abstract class Service {
+import 'properties.dart';
 
-  static const String URL = "http://127.0.0.1";
-  static const String PORT = "8081";
-  static const String VERSION = "mock0";
-  
+abstract class Service {
   String buildURI() {
     var buffer = new StringBuffer();
-    buffer.write(URL);
+    buffer.write(Properties.PROTOCOL);
+    buffer.write("://");
+    buffer.write(Properties.HOSTNAME);
     buffer.write(":");
-    buffer.write(PORT);
+    buffer.write(Properties.PORT);
     buffer.write("/");
-    buffer.write(VERSION);
+    buffer.write(Properties.VERSION);
     buffer.write("/");
     return buffer.toString();
   }

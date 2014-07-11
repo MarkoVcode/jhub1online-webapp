@@ -2,3 +2,5 @@ name: JHUB1OnlineWebApp
 description: A sample web application
 dependencies:
   browser: any
+  restful:
+    git: https://github.com/Mixbook/restful.dart
