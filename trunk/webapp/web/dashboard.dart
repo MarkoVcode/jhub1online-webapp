@@ -1,23 +1,13 @@
 import 'dart:html';
-import 'restAPI/ajax/services.dart';
-import 'restAPI/objects/agent.dart';
-import 'restAPI/objects/agents.dart';
-import "package:restful/restful.dart";
+import "package:JHUB1OnlineRestfulAPI/jhub1_online_restful_api.dart";
 
 void main() {
   
- var api = new RestApi(apiUri: "http://127.0.0.1:8081/mock0", format: new JsonFormat());
-  var usersApi = api.resource("agents");
-  usersApi.findAll();
-  
-  usersApi.findAll().then(usersJson);
-  
-  usersApi.find("A-1E6B9-5P8TQ-HJ9JKDL0Y.733").then(usersJson2);
-  
- var ajax = new JHUB1Services();
- //ajax.getAgentByID(doShitWithMyAgent, "A-1E6B9-5P8TQ-HJ9JKDL0Y.733");
-  ajax.getAgents(doShitWithMyAgents);
- // print(usersJson);
+ var jhub1online = new JHUB1OnlineServices();
+ 
+ jhub1online.getAgentByID((agent) => doShitWithMyAgent(agent), "A-1E6B9-5P8TQ-HJ9JKDL0Y.733");
+ jhub1online.getAgents((agents) => doShitWithMyAgents(agents));
+
   querySelector("#sample_text_id")
       ..text = "Click me!"
       ..onClick.listen(reverseText);
@@ -25,7 +15,7 @@ void main() {
 
 void usersJson(Map parsedMap) {
   print("CRAP");
-  String total = parsedMap["total"];
+  int total = parsedMap["total"];
   print(total);
 }
 
@@ -46,7 +36,7 @@ void reverseText(MouseEvent event) {
 
 void doShitWithMyAgents(Agents agents) {
   if(agents.hasError()) {
-    querySelector("#sample_text_id_agents").text = agents.getErrorMessage(); 
+    querySelector("#sample_text_id_agents").text = "ERROR!!!!!!!!!!"; 
   } else {
     var buffer = new StringBuffer();
     List<Agent> agentsList = agents.getAgents();
@@ -63,10 +53,34 @@ void doShitWithMyAgents(Agents agents) {
 
 void doShitWithMyAgent(Agent agent) {
   if(agent.hasError()) {
-    querySelector("#sample_text_id").text = "ERROR";
+    querySelector("#sample_text_id").text = agent.getError().request.status.toString();
   } else {
     querySelector("#sample_text_id").text = agent.getColor();
     querySelector("#sample_text_id_link").text = agent.getLink().getHref();
   }
 }
 
+void doShitWithMyAgent1(Agent agent) {
+  if(agent.hasError()) {
+    querySelector("#sample_text_id1").text = agent.getError().request.status.toString();
+  } else {
+    querySelector("#sample_text_id1").text = agent.getColor();
+    querySelector("#sample_text_id_link1").text = agent.getLink().getHref();
+  }
+}
+void doShitWithMyAgent2(Agent agent) {
+  if(agent.hasError()) {
+    querySelector("#sample_text_id2").text = agent.getError().request.status.toString();
+  } else {
+    querySelector("#sample_text_id2").text = agent.getColor();
+    querySelector("#sample_text_id_link2").text = agent.getLink().getHref();
+  }
+}
+void doShitWithMyAgent3(Agent agent) {
+  if(agent.hasError()) {
+    querySelector("#sample_text_id3").text = agent.getError().request.status.toString();
+  } else {
+    querySelector("#sample_text_id3").text = agent.getColor();
+    querySelector("#sample_text_id_link3").text = agent.getLink().getHref();
+  }
+}

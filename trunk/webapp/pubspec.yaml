@@ -1,6 +1,6 @@
 name: JHUB1OnlineWebApp
-description: A sample web application
+description: JHUB1Online Web application
 dependencies:
+  JHUB1OnlineRestfulAPI:
+    git: https://github.com/MarkoVcode/JHUB1OnlineRestfulAPI
   browser: any
-  restful:
-    git: https://github.com/Mixbook/restful.dart
