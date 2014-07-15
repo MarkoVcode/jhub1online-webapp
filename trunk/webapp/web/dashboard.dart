@@ -1,13 +1,19 @@
 import 'dart:html';
-import "package:JHUB1OnlineRestfulAPI/jhub1_online_restful_api.dart";
+import "package:JHUB1OnlineRestfulAPI/jhub1_online.dart";
 
 void main() {
   
  var jhub1online = new JHUB1OnlineServices();
  
+ //so far two methods are implemented:
+ // retrieving single agent by id
  jhub1online.getAgentByID((agent) => doShitWithMyAgent(agent), "A-1E6B9-5P8TQ-HJ9JKDL0Y.733");
+ // retrieving all agents 
  jhub1online.getAgents((agents) => doShitWithMyAgents(agents));
-
+ //You need to provide callbacks for both of them 
+ 
+ 
+ //Default click listener
   querySelector("#sample_text_id")
       ..text = "Click me!"
       ..onClick.listen(reverseText);
@@ -22,10 +28,11 @@ void reverseText(MouseEvent event) {
   querySelector("#sample_text_id").text = buffer.toString();
 }
 
-//Call backs for  agents:
+//Callbacks for  agents:
 
 void doShitWithMyAgents(Agents agents) {
   //always check the error - you do not have to handle it nicely right now but we will have to later
+  // you can excercise error by changing SoapUI settings to return 404 
   if(agents.hasError()) {
     querySelector("#sample_text_id_agents").text = "ERROR!!!!!!!!!!"; 
   } else {
@@ -43,6 +50,7 @@ void doShitWithMyAgents(Agents agents) {
 }
 
 void doShitWithMyAgent(Agent agent) {
+  
   if(agent.hasError()) {
     querySelector("#sample_text_id").text = agent.getError().request.status.toString();
   } else {
