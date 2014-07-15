@@ -4,10 +4,10 @@ packages:
   JHUB1OnlineRestfulAPI:
     description:
       ref: null
-      resolved-ref: "3148804790e6348a4d0490b50b4895c2155b2798"
+      resolved-ref: d03237b8d7999fbda1dd7f02150307232a38d20a
       url: "https://github.com/MarkoVcode/JHUB1OnlineRestfulAPI"
     source: git
-    version: "0.1.0"
+    version: "0.1.2"
   browser:
     description: browser
     source: hosted
