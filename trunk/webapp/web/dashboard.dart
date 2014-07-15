@@ -13,18 +13,6 @@ void main() {
       ..onClick.listen(reverseText);
 }
 
-void usersJson(Map parsedMap) {
-  print("CRAP");
-  int total = parsedMap["total"];
-  print(total);
-}
-
-void usersJson2(Map parsedMap) {
-  print("CRAP2");
-  String total = parsedMap["id"];
-  print(total);
-}
-
 void reverseText(MouseEvent event) {
   var text = querySelector("#sample_text_id").text;
   var buffer = new StringBuffer();
@@ -34,7 +22,10 @@ void reverseText(MouseEvent event) {
   querySelector("#sample_text_id").text = buffer.toString();
 }
 
+//Call backs for  agents:
+
 void doShitWithMyAgents(Agents agents) {
+  //always check the error - you do not have to handle it nicely right now but we will have to later
   if(agents.hasError()) {
     querySelector("#sample_text_id_agents").text = "ERROR!!!!!!!!!!"; 
   } else {
@@ -57,30 +48,5 @@ void doShitWithMyAgent(Agent agent) {
   } else {
     querySelector("#sample_text_id").text = agent.getColor();
     querySelector("#sample_text_id_link").text = agent.getLink().getHref();
-  }
-}
-
-void doShitWithMyAgent1(Agent agent) {
-  if(agent.hasError()) {
-    querySelector("#sample_text_id1").text = agent.getError().request.status.toString();
-  } else {
-    querySelector("#sample_text_id1").text = agent.getColor();
-    querySelector("#sample_text_id_link1").text = agent.getLink().getHref();
-  }
-}
-void doShitWithMyAgent2(Agent agent) {
-  if(agent.hasError()) {
-    querySelector("#sample_text_id2").text = agent.getError().request.status.toString();
-  } else {
-    querySelector("#sample_text_id2").text = agent.getColor();
-    querySelector("#sample_text_id_link2").text = agent.getLink().getHref();
-  }
-}
-void doShitWithMyAgent3(Agent agent) {
-  if(agent.hasError()) {
-    querySelector("#sample_text_id3").text = agent.getError().request.status.toString();
-  } else {
-    querySelector("#sample_text_id3").text = agent.getColor();
-    querySelector("#sample_text_id_link3").text = agent.getLink().getHref();
   }
 }
