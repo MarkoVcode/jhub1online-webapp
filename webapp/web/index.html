@@ -10,22 +10,39 @@
  
   <body>   
     <div clas="wrapper">
+    
+      <header>
+        <h1>Header</h1>
+      </header>
+    
       <nav>
       <h1>Menu</h1>
         <ul>
-          <li>Dashboard</li>
-          <li>Agents
-            <ul>
-              <li>Agent 1</li>
-              <li>Agent 2</li>
-              <li>Agent 3</li>
-            </ul>
-          </li>
-          <li>Endpoints</li>
-          <li>Endpoints type</li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Agents</a></li>
+          <li><a href="#">Endpoints</a></li>
+          <li><a href="#">Endpoints type</a></li>
         </ul>
       </nav>
-      <div class="content"></div>
+      <!-- Dashboard content -->
+      <div class="content dashboard">
+        Dashboard content
+      </div>
+      
+      <!-- Agents content -->
+      <div class="content agents">
+        Agents content
+      </div>
+        
+      <!-- Endpoints content -->
+      <div class="content endpoints">
+        Endpoints content
+      </div>
+      
+      <!-- Endpoints-type content -->
+      <div class="content endpoints-type">
+        Endpoints type content
+      </div>
     </div>
     <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
     <script src="packages/browser/dart.js"></script>
