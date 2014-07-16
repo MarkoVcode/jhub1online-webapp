@@ -1,5 +1,5 @@
 import 'dart:html';
-import "package:JHUB1OnlineRestfulAPI/jhub1_online.dart";
+import "package:jhub1onlinerestfulapi/jhub1_online.dart";
 
 void main() {
   
