@@ -11,7 +11,10 @@ void main() {
  // retrieving all agents 
  jhub1online.getAgents((agents) => doShitWithMyAgents(agents));
  //You need to provide callbacks for both of them 
- 
+
+ //Methods to get values of the endpoins
+ jhub1online.getValuesByAgentName((values) => doShitWithMyValues(values), "tt56rsnixh");
+ //jhub1online.getNewValues((values) => doShitWithMyValues(values));
  
  //Default click listener
   querySelector("#sample_text_id")
@@ -56,5 +59,24 @@ void doShitWithMyAgent(Agent agent) {
   } else {
     querySelector("#sample_text_id").text = agent.getColor();
     querySelector("#sample_text_id_link").text = agent.getLink().getHref();
+  }
+}
+
+void doShitWithMyValues(Values values) {
+  //always check the error - you do not have to handle it nicely right now but we will have to later
+  // you can excercise error by changing SoapUI settings to return 404 
+  if(values.hasError()) {
+    querySelector("#sample_text_id_values").text = "ERROR!!!!!!!!!!"; 
+  } else {
+    var buffer = new StringBuffer();
+    List<Value> valuesList = values.getValues();
+    for(Value value in valuesList) {
+      buffer.write("<div style=\"background-color:");
+      buffer.write(value.getName());
+      buffer.write(";\">");
+      buffer.write(value.getName());
+      buffer.write("</div>");
+    } 
+    querySelector("#sample_text_id_values").appendHtml(buffer.toString());
   }
 }
