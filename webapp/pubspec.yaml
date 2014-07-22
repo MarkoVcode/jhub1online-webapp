@@ -2,5 +2,5 @@ name: JHUB1OnlineWebApp
 description: JHUB1Online Web application
 dependencies:
   browser: any
-  jhub1onlinerestfulapi:
-    git: https://github.com/MarkoVcode/JHUB1OnlineRestfulAPI
+  jhub1onlineapi:
+    git: https://github.com/MarkoVcode/JHUB1OnlineDartAPI
