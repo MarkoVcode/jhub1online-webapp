@@ -1,5 +1,5 @@
 import 'dart:html';
-import "package:jhub1onlinerestfulapi/jhub1_online.dart";
+import "package:jhub1onlineapi/jhub1onlineapi.dart";
 
 void main() {
   
@@ -58,7 +58,7 @@ void doShitWithMyAgent(Agent agent) {
     querySelector("#sample_text_id").text = agent.getError().request.status.toString();
   } else {
     querySelector("#sample_text_id").text = agent.getColor();
-    querySelector("#sample_text_id_link").text = agent.getLink().getHref();
+    querySelector("#sample_text_id_link").text = agent.getLinks().first.getHref();
   }
 }
 
