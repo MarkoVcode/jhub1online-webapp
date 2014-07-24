@@ -1,6 +1,7 @@
-name: JHUB1OnlineWebApp
+name: jhub1onlinewebapp
 description: JHUB1Online Web application
 dependencies:
   browser: any
   jhub1onlineapi:
     git: https://github.com/MarkoVcode/JHUB1OnlineDartAPI
+  angular: ">=0.12.0 <0.13.0"
