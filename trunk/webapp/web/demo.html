@@ -19,15 +19,22 @@
         There is a problem: {{ctrl.message}}
       </div>
       <div ng-switch-when="true">  
-        Working OK!
+        App status: {{ctrl.getAppCondition()}}
       </div>
     </div>
-    <div>App status: {{ctrl.status}}</div>
+    <div>Ping result: {{ctrl.status}}</div>
       <nav>
         <h1>Menu</h1>
           <ul>
             <li><a href="#/dashboard">Dashboard</a></li>
-            <li><a href="#/agents">Agents</a></li>
+            
+            <li><a href="#/agents">Agents</a>
+              <ul ng-if="ctrl.menuAgentsList != null">
+                      <li ng-repeat="agent in ctrl.menuAgentsList">
+                         {{agent.getName()}} {{agent.getStatus()}}
+                      </li>
+              </ul>
+            </li>
             <li><a href="#/endpoints">Endpoints</a></li>
             <li><a href="#/types">Endpoints type</a></li>
           </ul>
