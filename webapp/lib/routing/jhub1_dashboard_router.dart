@@ -10,6 +10,10 @@ void jhub1DashboardRouteInitializer(Router router, RouteViewFactory views) {
     'endpoints': ngRoute(
         path: '/endpoints',
         view: 'view/endpoints.html'),
+    'dashboard': ngRoute(
+        defaultRoute: true,
+        path: '/dashboard',
+        view: 'view/dashboard.html'),
     'types': ngRoute(
         path: '/types',
         view: 'view/types.html')

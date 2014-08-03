@@ -1,0 +1,22 @@
+<div id="agents-list">
+  <h3>Agents List</h3>
+  <div ng-if="cmp.agentsLoading">
+  LOADING...
+  </div>
+  <div ng-if="cmp.agentsList != null">
+     <a href="" ng-click="cmp.reloadAgents()">Reload agents link</a>
+     <input type="button" value="Reload Agents button" ng-click="cmp.reloadAgents()">
+        <div id="recipe-list">
+          <ul>
+            <li ng-repeat="agent in cmp.agentsList">
+                <a class="extra-space" href="#/agents/{{agent.getID()}}/view">{{agent.getName()}}</a>
+            </li>
+          </ul>
+        </div>  
+
+  </div>
+  
+  <div ng-if="cmp.agentsList == null">
+    <p>No agents on list so far.</p>
+  </div>
+</div>
