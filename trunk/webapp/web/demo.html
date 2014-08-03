@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app>
   <head>
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dashboard</title>
+    <title>JHUB1 Online Dashboard</title>
+    
+    <style>
+    [ng-cloak], .ng-cloak {
+      display: none !important;
+    }
+    </style>
   </head>
  
-  <body>   
-    <p id="text"></p>
-    <div id="sample_container_id">
-      <p id="sample_text_id">Click me!</p>
-      <p id="sample_text_id_link">Click me!</p>
-      <p id="sample_text_id_agents">Agents:</p>
-      <p id="sample_text_id_values">Values:</p>   
+  <body jhub1online-app ng-cloak>
+    <div ng-switch="ctrl.isPageLoaded">
+      <div ng-switch-when="false">
+        There is a problem: {{ctrl.message}}
+      </div>
+      <div ng-switch-when="true">  
+        Working OK!
+      </div>
     </div>
+    <div>App status: {{ctrl.status}}</div>
+      <nav>
+        <h1>Menu</h1>
+          <ul>
+            <li><a href="#/dashboard">Dashboard</a></li>
+            <li><a href="#/agents">Agents</a></li>
+            <li><a href="#/endpoints">Endpoints</a></li>
+            <li><a href="#/types">Endpoints type</a></li>
+          </ul>
+      </nav>
+      <section id="details">
+        <ng-view></ng-view>
+      </section>
     <script type="application/dart" src="demo.dart"></script>
     <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
     <script src="packages/browser/dart.js"></script>
