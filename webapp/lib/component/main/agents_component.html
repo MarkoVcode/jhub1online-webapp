@@ -1,7 +1,7 @@
 <div id="agents-list">
   <h3>Agents List</h3>
-  <div ng-if="cmp.agentsLoading">
-  LOADING...
+  <div ng-if="cmp.agentsLoading" class="italic">
+  <p>LOADING...</p>
   </div>
   <div ng-if="cmp.agentsList != null">
      <a href="" ng-click="cmp.reloadAgents()">Reload agents link</a>
@@ -13,7 +13,6 @@
             </li>
           </ul>
         </div>  
-
   </div>
   
   <div ng-if="cmp.agentsList == null">
