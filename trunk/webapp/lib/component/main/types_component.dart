@@ -11,6 +11,9 @@ import 'package:logging/logging.dart';
     cssUrl: 'packages/jhub1onlinewebapp/component/main/types_component.css',
     publishAs: 'cmp')
 class ViewTypesComponent {
+  @NgOneWay('ping-object')
+  Ping pingObj;
+
   //all agents will be stored here
   Types typesObj;
   
@@ -23,6 +26,8 @@ class ViewTypesComponent {
   //accessor for the agents - 'agentsList' - this is used in the template 
   List<EpType> get typesList => typesObj == null ? null : typesObj.getTypes();
 
+  String get pingStatus => pingObj == null ? null : pingObj.getPingTest();
+  
   //accessor for loading indicator - see template for agentsLoading
   bool get typesLoading => loading;
   
