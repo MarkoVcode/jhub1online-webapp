@@ -1,0 +1,20 @@
+<div id="agents-list">
+  <h3>Types List</h3>
+  <div ng-if="cmp.typesLoading" class="italic">
+  <p>LOADING...</p>
+  </div>
+  <div ng-if="cmp.typesList != null">
+     <a href="" ng-click="cmp.reloadTypes()">Reload types link</a>
+        <div id="recipe-list">
+          <ul>
+            <li ng-repeat="types in cmp.typesList">
+                <a class="extra-space" href="#/types/{{types.getID()}}/view">{{types.getName()}}</a>
+            </li>
+          </ul>
+        </div>  
+  </div>
+  
+  <div ng-if="cmp.typesList == null">
+    <p>No types on list so far.</p>
+  </div>
+</div>

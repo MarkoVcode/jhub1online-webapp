@@ -6,6 +6,7 @@ import 'package:jhub1onlinewebapp/routing/dashboard_router.dart';
 import 'package:jhub1onlinewebapp/jhub1app.dart';
 import 'package:jhub1onlinewebapp/service/query_service.dart';
 import 'package:jhub1onlinewebapp/component/main/agents_component.dart';
+import 'package:jhub1onlinewebapp/component/main/types_component.dart';
 
 Logger _logger = new Logger("demoPage");
 
@@ -21,6 +22,7 @@ class MyAppModule extends Module {
   MyAppModule() {
     type(JHUB1OnlineMainController);
     type(ViewAgentsComponent);
+    type(ViewTypesComponent);
     type(QueryService);
     value(RouteInitializerFn, jhub1DashboardRouteInitializer);
     factory(NgRoutingUsePushState,
