@@ -8,7 +8,7 @@
         <div id="recipe-list">
           <ul>
             <li ng-repeat="types in cmp.typesList">
-                <a class="extra-space" href="#/types/{{types.getID()}}/view">{{types.getName()}}</a>
+                <a class="extra-space" href="#/types/{{types.getID()}}/view">{{types.getName()}} - {{cmp.pingStatus}}</a>
             </li>
           </ul>
         </div>  

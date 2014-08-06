@@ -56,6 +56,7 @@ class JHUB1OnlineMainController {
   }
 
   String get status => ping == null ? null : ping.getPingTest();
+  Ping get pingObject => ping == null ? null : ping;
   List<Agents> get menuAgentsList => menuAgents == null ? null : menuAgents.getAgents();
 }
 
