@@ -1,49 +1,59 @@
 <!DOCTYPE html>
-
 <html ng-app>
-  <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JHUB1 Online Dashboard</title>
-    
-    <style>
-    [ng-cloak], .ng-cloak {
-      display: none !important;
-    }
-    </style>
-  </head>
- 
-  <body jhub1online-app ng-cloak>
-    <div ng-switch="ctrl.isPageLoaded">
-      <div ng-switch-when="false">
-        There is a problem: {{ctrl.message}}
-      </div>
-      <div ng-switch-when="true">  
-        App status: {{ctrl.getAppCondition()}}
-      </div>
-    </div>
-    <div>Ping result: {{ctrl.status}}</div>
-      <nav>
-        <h1>Menu</h1>
-          <ul>
-            <li><a href="#/dashboard">Dashboard</a></li>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JHUB1 Online Dashboard</title>
+		<link rel="stylesheet" href="/css/app.css" />
+		<style>
+			[ng-cloak], .ng-cloak {
+			display: none !important;
+			}
+		</style>
+	</head>
+	<body jhub1online-app ng-cloak>
+		<div class="wrapper">
             
-            <li><a href="#/agents">Agents</a>
-              <ul ng-if="ctrl.menuAgentsList != null">
-                      <li ng-repeat="agent in ctrl.menuAgentsList">
-                         {{agent.getName()}} {{agent.getStatus()}}
-                      </li>
-              </ul>
-            </li>
-            <li><a href="#/endpoints">Endpoints</a></li>
-            <li><a href="#/types">Endpoint types</a></li>
-          </ul>
-      </nav>
-      <section id="details">
-        <ng-view></ng-view>
-      </section>
-    <script type="application/dart" src="demo.dart"></script>
-    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
-    <script src="packages/browser/dart.js"></script>
-  </body>
+            <div ng-switch="ctrl.isPageLoaded">
+    			<span ng-switch-when="false">There is a problem: {{ctrl.message}}</span>
+    			<span ng-switch-when="true">App status: {{ctrl.getAppCondition()}}</span>
+                <span>Ping result: {{ctrl.status}}</span>
+    		</div>
+            
+            <div class="leftBlock">
+                <nav class="mainNav">
+                  <h1 class="mainNav_Outline">Menu</h1>
+                  <ul class="mainNav_items">
+                    <li>
+                      <a href="#/dashboard">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#/agents">Agents</a>
+                      <ul class="subNav" ng-if="ctrl.menuAgentsList != null">
+                        <li ng-repeat="agent in ctrl.menuAgentsList">
+                          {{agent.getName()}} {{agent.getStatus()}}
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#/endpoints">Endpoints</a>
+                    </li>
+                    <li>
+                      <a href="#/types">Endpoint types</a>
+                    </li>
+                  </ul>
+                </nav>            
+            </div>
+            
+            <div class="rightBlock">
+              <section id="details">
+                <ng-view></ng-view>
+              </section>            
+            </div>
+             
+        </div>
+		<script type="application/dart" src="demo.dart"></script>
+		<!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+		<script src="packages/browser/dart.js"></script>
+	</body>
 </html>
