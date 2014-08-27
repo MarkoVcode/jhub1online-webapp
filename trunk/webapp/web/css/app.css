@@ -1,12 +1,67 @@
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
+/*
+https://kuler.adobe.com/Tufte-color-theme-4239720/
+Color Palette
+blue #1d8281
+green #44bf87
+yellow #fbd258
+orange #f29a3f
+brown #db634f
+*/
 /* Global */
+body {
+  font-family: 'Arial', sans-serif;
+}
+.leftBlock {
+  float:left;
+}
+.rightBlock {
+  float: left;
+  width: 70%;
+}
+h3 {
+  background-color: #db634f;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
 
 /* Dashboard */
+.mainNav {
+  float: left;
+}
+.mainNav_Outline {
+  background-color: #1d8281;
+  color: #fff;
+  padding: 10px 5px;
+  width: auto; 
+}
+.mainNav_items li {
+  border-bottom: 1px solid #fff;
+}
+.mainNav_items li a {
+  background-color: #44bf87;
+  display: block;
+  color: #fff;
+  padding: 5px 5px;
+  text-decoration: none;
+}
+.mainNav_items li a:hover {
+  text-decoration: underline;
+}
 
 /* Agents */
 
 /* Endpoints */
 
 /* Endpoints type */
+
+
+.ng-binding span {
+  display: block;
+  color: red;
+}
